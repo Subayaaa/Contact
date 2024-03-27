@@ -17,6 +17,22 @@
                     <ion-title size="large">Event</ion-title>
                 </ion-toolbar>
             </ion-header>
+
+            <ion-button @dblclick="showAlert" expand="block" fill="solid">
+                ayo pukul aku
+            </ion-button>
+
+            <ion-button @click="showAlert" expand="block" fill="solid">
+                ayo pukul aku
+            </ion-button>
+
+            <ion-button expand="block" fill="solid">
+                ayo pukul aku
+            </ion-button>
+
+            <ion-button expand="block" fill="solid">
+                ayo pukul aku
+            </ion-button>
         </ion-content>
     </ion-page>
 </template>
@@ -29,5 +45,9 @@ const router = useRouter()
 
 const back = () => {
     router.back()
+}
+
+const showAlert = () => {
+    alert('tombol ditekan!')
 }
 </script>

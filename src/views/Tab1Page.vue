@@ -11,12 +11,12 @@
           <ion-label>Daftar Kontak</ion-label>
         </ion-list-header>
 
-        <ion-item-sliding>
+        <ion-item-sliding v-for="i in data">
           <ion-item>
             <ion-label>
-              <h2>Nama Kontak</h2>
-              <p>Nomor</p>
-              <p>Email</p>
+              <h2>{{ i.name }}</h2>
+              <p>{{ i.phone }}</p>
+              <p>{{ i.email }}</p>
             </ion-label>
           </ion-item>
 
@@ -37,6 +37,7 @@
 </template>
 
 <script setup lang="ts">
+import { data } from "../services/contacts";
 import { useRouter } from 'vue-router';
 import { add, heart, trash } from "ionicons/icons";
 

@@ -17,15 +17,36 @@
                     <ion-title size="large">Model</ion-title>
                 </ion-toolbar>
             </ion-header>
+
+            <div class="padding">
+                <p>{{ name }}</p>
+                <p>{{ address }}</p>
+
+                <ion-input label="Nama" v-model="name" label-placement="floating" fill="solid"
+                    placeholder="Masukkan Nama"></ion-input>
+
+                <br>
+
+                <ion-input label="Nama" v-model="name" label-placement="floating" fill="solid"
+                    placeholder="Masukkan Nama"></ion-input>
+
+                <br>
+
+                <ion-input label="Alamat" v-model="address" label-placement="floating" fill="solid"
+                    placeholder="Masukkan Alamat"></ion-input>
+            </div>
         </ion-content>
     </ion-page>
 </template>
 
 <script setup>
+import { ref, onMounted, onActivated, onUpdated, onUnmounted } from 'vue';
 import { useRouter } from "vue-router";
 import { arrowBackOutline } from "ionicons/icons";
 
 const router = useRouter()
+const name = ref('')
+const address = ref()
 
 const back = () => {
     router.back()
