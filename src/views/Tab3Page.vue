@@ -6,14 +6,11 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 3</ion-title>
-        </ion-toolbar>
-      </ion-header>
 
       <ion-list>
-        <ion-list-header>Vue Basic Features</ion-list-header>
+        <ion-list-header>
+          <ion-label>Vue Basic Features</ion-label>
+        </ion-list-header>
 
         <ion-item @click="toState" class="ion-activatable ripple-parent">
           <ion-ripple-effect></ion-ripple-effect>
